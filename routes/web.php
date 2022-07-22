@@ -19,8 +19,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/admin', 'HomeController@index')->name('admin');
-Route::resource('posts', 'Admin\PostController');  // post è il nome della tabella del database, nonche nome del percorso
+// Route::get('/admin', 'HomeController@index')->name('admin');
+// Route::resource('posts', 'Admin\PostController');  // post è il nome della tabella del database, nonche nome del percorso
 
 Route::middleware('auth')
     ->namespace('Admin')

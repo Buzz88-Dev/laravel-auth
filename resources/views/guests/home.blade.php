@@ -69,7 +69,7 @@
                 <div class="top-right links">
                     @auth
                         <a href="{{ route('admin.dashboard') }}">Admin</a>
-                        {{-- non vedo il link Admin --}}
+                        {{-- vedo il link Admin solo se sono loggato --}}
                     @else
                         <a href="{{ route('login') }}">Login</a>
 
