@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,6 +29,6 @@ Route::middleware('auth')
     ->prefix('admin')
     ->group(function () {
         Route::get('/', 'AdminController@dashboard')->name('dashboard');
-        Route::resource('posts', 'PostController');
+        Route::resource('posts', 'PostController');  // tutti i controlli che si trovano in PostController si trovano sotto la cartella Admin; il nome viene indicato in ->namespace('Admin')
     });
 // con questo codice definisco i prefissi

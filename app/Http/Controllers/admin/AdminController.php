@@ -26,8 +26,8 @@ class AdminController extends Controller
     public function dashboard()
     {
         $user = Auth::user();
-        dump($user->toArray());   // analizzare cosa ritorna; password e remember_token non vengono restituiti
-        dump(Auth::check());
+        // dump($user->toArray());   // analizzare cosa ritorna; password e remember_token non vengono restituiti
+        // dump(Auth::check());
         return view('admin.dashboard');
     }
 }

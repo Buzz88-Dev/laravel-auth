@@ -39,9 +39,10 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
-    // TODO: login with name
-    // public function name()
-    // {
-    //     return 'name';
-    // }
+    // per cambiare i dati richiesti per loggarsi (es email o username)
+    // la funzione si deve chiamare username
+    public function username()
+    {
+        return 'email'; // questo deve coincidere con il nome della colonna nel database
+    }
 }
